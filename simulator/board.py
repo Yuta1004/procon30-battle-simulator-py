@@ -21,6 +21,13 @@ class Board:
         self.tiled = tiled
 
 
+    def __str__(self):
+        points_str = "\n".join([str(elem) for elem in self.points])
+        tiled_str = "\n".join([str(elem) for elem in self.tiled])
+        return  "--Points--\n" + points_str + "\n\n" +\
+                "--Tiled--\n" + tiled_str + "\n"
+
+
 def generate_board(width, height, point_upper, point_lower,\
                    player_num, generate_type=LINE_SYMMETRY_HALF):
     """
