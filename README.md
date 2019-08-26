@@ -1,5 +1,9 @@
 # \#procon30 battle simulator package
 
+## Main Repository
+
+[Procon30BattleSystem (Github)](https://github.com/Yuta1004/Procon30BattleSystem)
+
 ## Usage
 
 Include `simulator` directory in your project.
