@@ -12,6 +12,12 @@ class Agent:
         self.dy = -10
 
 
+    def __str__(self):
+        return  "TeamID : " + str(self.team) + "\n" +\
+                "AgentID : " + str(self.id) + "\n" +\
+                "Position : (" + str(self.x) + "," + str(self.y) + ")"
+
+
     def move(self):
         if not self.remove_panel:
             self.x += self.dx
