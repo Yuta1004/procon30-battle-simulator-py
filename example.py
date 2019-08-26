@@ -50,7 +50,6 @@ if __name__ == "__main__":
     game.step()
 
     # Show board status.
-    print(game.board.points, end="\n\n")
-    print(game.board.tiled, end="\n\n")
+    print(game.board, end="\n\n")
     for agent in game.agents:
         print(agent, end="\n\n")
