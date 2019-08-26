@@ -50,6 +50,7 @@ if __name__ == "__main__":
     game.step()
 
     # Show board status.
+    print(game.cal_score([1, 2]), end="\n\n")
     print(game.board, end="\n\n")
     for agent in game.agents:
         print(agent, end="\n\n")
