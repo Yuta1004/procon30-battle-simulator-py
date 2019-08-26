@@ -32,17 +32,3 @@ def transpositon_2d_list(target):
             ret_list[x][y] = target[y][x]
 
     return ret_list
-
-
-def search_result_process(tiled, result):
-    tiled_np = np.array(tiled)
-    if result:
-        tiled_np = tiled_np / 2.0
-        tiled_np = np.ceil(tiled_np)
-    else:
-        tiled_np -= 2
-        tiled_np = np.abs(tiled_np)
-        tiled_np = tiled_np == 1
-
-    tiled_np = tiled_np.astype(np.int)
-    return tiled_np.tolist()
