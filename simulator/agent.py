@@ -1,3 +1,6 @@
+# Copylight(c) 2019 NakagamiYuta
+# LICENCE : MIT
+
 class Agent:
     def __init__(self, team, _id, x, y):
         self.team = team

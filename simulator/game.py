@@ -1,3 +1,6 @@
+# Copylight(c) 2019 NakagamiYuta
+# LICENCE : MIT
+
 import json
 from simulator.common import flatten_2d, gen_2d_list, search_result_process
 

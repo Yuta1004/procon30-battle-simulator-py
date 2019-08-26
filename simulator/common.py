@@ -1,3 +1,6 @@
+# Copylight(c) 2019 NakagamiYuta
+# LICENCE : MIT
+
 import numpy as np
 
 def flatten_2d(target_list):

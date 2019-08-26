@@ -1,3 +1,6 @@
+# Copylight(c) 2019 NakagamiYuta
+# LICENCE : MIT
+
 from random import randint
 from copy import deepcopy
 from simulator.common import gen_2d_list, transpositon_2d_list
