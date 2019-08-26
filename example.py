@@ -1,6 +1,4 @@
-from simulator.game import Game
-from simulator.agent import Agent
-from simulator.board import Board
+from simulator import Game, Board, Agent
 
 
 if __name__ == "__main__":
