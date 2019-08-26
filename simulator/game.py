@@ -1,8 +1,9 @@
 # Copylight(c) 2019 NakagamiYuta
 # LICENCE : MIT
 
+import numpy as np
 import json
-from simulator.common import flatten_2d, gen_2d_list, search_result_process
+from simulator.common import flatten_2d, gen_2d_list
 
 class Game:
     """
@@ -143,7 +144,7 @@ class Game:
                 for x in range(self.board.width):
                     if self.rec_tiled[y][x] == 0:
                         search_result = self.__recursive_child(x, y, team_id)
-                        self.rec_tiled = search_result_process(self.rec_tiled, search_result)
+                        self.rec_tiled = self.__search_result_process(self.rec_tiled, search_result)
                         # ↑探索成功ならrec_tiledに結果を反映、そうでない場合は結果を破棄する
 
             # 領域ポイント : 囲みが有効である座標のスコアを合計する
@@ -190,3 +191,16 @@ class Game:
         return (0 <= x) and (x < self.board.width) and\
                     (0 <= y) and (y < self.board.height)
 
+
+    def __search_result_process(self, tiled, result):
+        tiled_np = np.array(tiled)
+        if result:
+            tiled_np = tiled_np / 2.0
+            tiled_np = np.ceil(tiled_np)
+        else:
+            tiled_np -= 2
+            tiled_np = np.abs(tiled_np)
+            tiled_np = tiled_np == 1
+
+        tiled_np = tiled_np.astype(np.int)
+        return tiled_np.tolist()
